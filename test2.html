@@ -81,7 +81,7 @@
        </footer>
         <div style="text-align:left">
             <p class="print">
-                <span style="cursor:pointer" onclick="print();" class="Noprint1">打印</span>
+                <span style="cursor:pointer" onclick="prints();" class="Noprint1">打印</span>
             </p>
         </div>
     </div>
@@ -127,16 +127,18 @@
     }
     //打印
     function prints(){
-        pagesetup_null();
-        //wb.printing.header = "居左显示&b居中显示&b居右显示页码，第&p页/共&P页";
-        //wb.printing.footer = "居左显示&b居中显示&b居右显示页码，第&p页/共&P页";
-        try{
-            wb.execwb(6,1);
-        }catch(e){
-            alert("您的浏览器不支持此功能");
-        }
+        $.ajax({
+            type:"get",
+            url:"http://localhost:8080/wpprintdata.asp",
+            data:{wpprintdata:"",value1:"",value2:"",value3:"",value4:"",value5:"",value6:"",value7:"",value8:"",value9:"",value10:""},
+            dataType:"jsonp"
+        });
+
     }
     </script>
+    <!--<script src="jquery-1.6.4.min.js"></script>-->
+    <script src="jquery.js"></script>
+    <script src="jquery.jqprint.js"></script>
 <OBJECT classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" id="wb" width="0" height="0"></OBJECT>
     </body>
 </html>
