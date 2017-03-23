@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" media="screen" type="text/css" href="css/bank.css" />
+    <!-- 打印样式 -->
+    <link rel="stylesheet" media="print" type="text/css" href="css/bank1.css" />
+
+</head>
+<body>
+<object id="WebBrowser" width=0 height=0 classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"></object>
+<div id="bankwrap">
+    <div class="container">
+        <img src="ma.png" alt=""/>
+        <div class="title">北京慧峰科技有限公司</div>
+        <header>
+            <span>NO:170308113</span>
+            <span>联数：1</span>
+        </header>
+        <div class="queueTime">
+            <h1><span>牌号：</span><span>113</span></h1>
+            <p><span>人数：</span><span>1</span></p>
+            <p><span>下单时间：</span><span>2017-03-08 12:51:42</span></p>
+            <p><span>收银时间：</span><span>2017-03-08 12:51:42</span></p>
+        </div>
+        <div class="detail">
+            <ul>
+                <li>
+                    <span>品名</span>
+                    <span>数量</span>
+                    <span>金额</span>
+                </li>
+                <li>
+                    <span>酸菜鱼火锅</span>
+                    <span>1</span>
+                    <span>16.00</span>
+                </li>
+                <li>
+                    <span>麻辣火锅</span>
+                    <span>1</span>
+                    <span>18.00</span>
+                </li>
+                <li>
+                    <span>总计</span>
+                    <span></span>
+                    <span>34.00</span>
+                </li>
+            </ul>
+        </div>
+        <div class="bill">
+            <ul>
+                <li>
+                    <span>现金</span>
+                    <span>34.00</span>
+                </li>
+                <li>
+                    <span>实收</span>
+                    <span>34.00</span>
+                </li>
+                <li>
+                    <span>找零</span>
+                    <span>0.00</span>
+                </li>
+            </ul>
+        </div>
+
+       <footer>
+           <div class="add">
+               <ul>
+                   <li>
+                       <span>地址:</span>
+                       <span>海淀大钟寺</span>
+                   </li>
+                   <li>
+                       <span>电话</span>
+                       <span>18612562171</span>
+                   </li>
+               </ul>
+           </div>
+       </footer>
+        <div style="text-align:left">
+            <p class="print">
+                <span style="cursor:pointer" onclick="prints();" class="Noprint1">打印</span>
+                <!--<INPUT type=button onclick="document.execCommand('print')" value=打印>-->
+            </p>
+        </div>
+    </div>
+</div>
+<!--打印控制-->
+<script src="js/rem.min.js"></script>
+<script language="JavaScript">
+    var hkey_root,hkey_path,hkey_key;
+    hkey_root="HKEY_CURRENT_USER";
+    hkey_path="\\Software\\Microsoft\\Internet Explorer\\PageSetup\\";
+    //配置网页打印的页眉页脚为空
+    function pagesetup_null(){
+        try{
+            var RegWsh = new ActiveXObject("WScript.Shell");
+            hkey_key="header";
+            RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"");
+            hkey_key="footer";
+            RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"");
+            //&b 第&p页/共&P页 &b
+        }catch(e){}
+    }
+//    //配置网页打印的页眉页脚为默认值
+//    function pagesetup_default(){
+//        try{
+//            var RegWsh = new ActiveXObject("WScript.Shell");
+//            hkey_key="header";
+//            RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"&w&b页码，&p/&P");
+//            hkey_key="footer";
+//            RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"&u&b&d");
+//        }catch(e){}
+//    }
+//    function printpreview(){
+//        pagesetup_null();
+//        //wb.printing.header = "居左显示&b居中显示&b居右显示页码，第&p页/共&P页";
+//        //wb.printing.footer = "居左显示&b居中显示&b居右显示页码，第&p页/共&P页";
+//        try{
+//            wb.execwb(7,1);
+//            window.opener=null;
+//
+//        }catch(e){
+//            alert("您的浏览器不支持此功能,请选择'文件'->'打印预览'");
+//        }
+//    }
+    //打印
+    function prints(){
+//        pagesetup_null();
+        //wb.printing.header = "居左显示&b居中显示&b居右显示页码，第&p页/共&P页";
+        //wb.printing.footer = "居左显示&b居中显示&b居右显示页码，第&p页/共&P页";
+        try{
+//            wb.execwb(6,6);
+//            document.all.WebBrowser.ExecWB(6,6);
+//            WebBrowser.ExecWB(7,1);
+            WebBrowser.ExecWB(6,1);
+//            WebBrowser.ExecWB(45,1);
+        }catch(e){
+            alert("您的浏览器不支持此功能");
+        }
+    }
+    </script>
+
+<!--<OBJECT classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" id="wb" width="0" height="0"></OBJECT>-->
+    </body>
+</html>

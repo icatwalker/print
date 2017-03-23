@@ -1,0 +1,93 @@
+@import "cssreset";
+@font-size :12px;
+html{
+  font-size: @font-size;
+  font-family: "Microsoft YaHei";
+}
+*{
+  box-sizing: border-box;
+}
+.bold (@size) {
+  font-weight: bold;
+  font-size: @size;
+}
+.font(@size){
+  font-size: @size;
+}
+.border_bottom{
+  border-bottom:2px dashed black;
+}
+#bankwrap{
+  width:30rem;
+  border:1px solid #0000FF;
+  span{
+    display: inline-block;
+  }
+  .container{
+    img{
+      width:6rem;
+    }
+    .font(1.4rem);
+    &>*{
+      padding:.5rem 0;
+    }
+   width:24rem;
+    margin:0 auto;
+    .title{
+      font-size: 2.3rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    header{
+      .border_bottom;
+      span{
+        width:48%;
+      }
+      span:first-child{
+        text-align: left;
+      }
+      span:last-child{
+        text-align: right;
+      }
+    }
+    .queueTime{
+      .border_bottom;
+      h1{
+       .bold(3rem);
+      }
+      p>span:first-child{
+        width:30%;
+      }
+
+    }
+    .detail{
+      .border_bottom;
+      li{
+        span:first-child{
+          width:50%;
+        }
+        span:first-child+span{
+          width:20%;
+        }
+        span:last-child{
+          width:25%;
+        }
+      }
+    }
+    .bill{
+      .border_bottom;
+      li>span:first-child{
+        width:72%;
+      }
+
+    }
+  }
+.Noprint1{
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  color:#ffffff;
+  background: #000;
+  border-radius: .2rem;
+}
+}

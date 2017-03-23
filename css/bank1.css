@@ -1,0 +1,175 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+html {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+}
+* {
+  box-sizing: border-box;
+}
+.border_bottom {
+  border-bottom: 2px dashed black;
+}
+#bankwrap {
+  width: 30rem;
+  border: 1px solid #0000FF;
+}
+#bankwrap span {
+  display: inline-block;
+}
+#bankwrap .container {
+  font-size: 1.4rem;
+  width: 24rem;
+  margin: 0 auto;
+}
+#bankwrap .container img {
+  width: 6rem;
+}
+#bankwrap .container > * {
+  padding: .5rem 0;
+}
+#bankwrap .container .title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+#bankwrap .container header {
+  border-bottom: 2px dashed black;
+}
+#bankwrap .container header span {
+  width: 48%;
+}
+#bankwrap .container header span:first-child {
+  text-align: left;
+}
+#bankwrap .container header span:last-child {
+  text-align: right;
+}
+#bankwrap .container .queueTime {
+  border-bottom: 2px dashed black;
+}
+#bankwrap .container .queueTime h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+#bankwrap .container .queueTime p > span:first-child {
+  width: 30%;
+}
+#bankwrap .container .detail {
+  border-bottom: 2px dashed black;
+}
+#bankwrap .container .detail li span:first-child {
+  width: 50%;
+}
+#bankwrap .container .detail li span:first-child + span {
+  width: 20%;
+}
+#bankwrap .container .detail li span:last-child {
+  width: 25%;
+}
+#bankwrap .container .bill {
+  border-bottom: 2px dashed black;
+}
+#bankwrap .container .bill li > span:first-child {
+  width: 72%;
+}
+#bankwrap .Noprint1 {
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  color: #ffffff;
+  background: #000;
+  border-radius: .2rem;
+}
+.print {
+  display: none;
+}
